@@ -11,12 +11,12 @@ export const Layout = () => {
             
                 <nav className='mt-10'>
                     <Link 
-                        className={`${location.pathname === '/' ? 'text-blue300' : 'text-white'} text-2xl block mt-2 hover:text-blue-300 `} 
+                        className={`${location.pathname === '/' ? 'text-blue-300' : 'text-white'} text-2xl block mt-2 hover:text-blue-300 `} 
                         to="/">
                             Clientes
                     </Link>
                     <Link 
-                        className={`${location.pathname === '/clientes/nuevo' ? 'text-blue300' : 'text-white'} text-2xl block mt-2 hover:text-blue-300 `} 
+                        className={`${location.pathname === '/clientes/nuevo' ? 'text-blue-300' : 'text-white'} text-2xl block mt-2 hover:text-blue-300 `} 
                         to="/clientes/nuevo">
                             Nuevo Cliente
                     </Link>
