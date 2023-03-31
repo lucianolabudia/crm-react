@@ -1,42 +1,43 @@
 import { useLoaderData } from "react-router-dom";
+import { Client } from "../components/Client";
 
 export function loader() {
   
   const clients = [
     {
         id: 1,
-        nombre: 'Messi',
-        telefono: 102013313,
+        name: 'Messi',
+        phone: 102013313,
         email: "liomessi@afa.com",
-        empresa: 'Seleccion Argentina'
+        company: 'Seleccion Argentina'
     },
     {
         id: 2,
-        nombre: 'Julian',
-        telefono: 138198313,
+        name: 'Julian',
+        phone: 138198313,
         email: "julianaraña@afa.com",
-        empresa: 'Seleccion Argentina'
+        company: 'Seleccion Argentina'
     },
     {
         id: 3,
-        nombre: 'Enzo',
-        telefono: 31983913,
+        name: 'Enzo',
+        phone: 31983913,
         email: "enzoelhombre@afa.com",
-        empresa: 'Seleccion Argentina'
+        company: 'Seleccion Argentina'
     },
     {
         id: 4,
-        nombre: 'Cuti',
-        telefono: 319381983,
+        name: 'Cuti',
+        phone: 319381983,
         email: "cutiromero@afa.com",
-        empresa: 'Seleccion Argentina'
+        company: 'Seleccion Argentina'
     },
     {
         id: 5,
-        nombre: 'Dibu',
-        telefono: 1398198938,
+        name: 'Dibu',
+        phone: 1398198938,
         email: "dibumartinez@afa.com",
-        empresa: 'Seleccion Argentina'
+        company: 'Seleccion Argentina'
     },
   ];
 
@@ -54,6 +55,31 @@ export const Index = () => {
     <>
       <h1 className="font-black text-4xl text-blue-900">Clientes</h1>
       <p className="mt-3">Administra tus Clientes</p>
+
+      { clients.length ? (
+        <table className="w-full bg-white shadow mt-5 table-auto">
+          <thead className="bg-blue-800 text-white">
+            <tr>
+              <th className="p-2">Cliente</th>
+              <th className="p-2">Contacto</th>
+              <th className="p-2">Acciones</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            { clients.map( client => (
+              <Client
+                client={ client }
+                key={ client.id }
+              />
+            )) }
+          </tbody>
+          
+
+        </table>
+      ) : (
+        <p>No hay Clientes registrados todavia...</p>
+      )}
     </>
   )
 }
