@@ -7,12 +7,20 @@ export async function action({ request }) {
 
   const data = Object.fromEntries(formData);
 
+  const email = formData.get('email');
+
   // Validacion
   const errors = [];
   if (Object.values(data).includes('')) {
     errors.push('Todos los campos son obligatorios');
   }
 
+  // Validacion Email
+  let regex = new RegExp("([!#-'*+/-9=?A-Z^-~-]+(\.[!#-'*+/-9=?A-Z^-~-]+)*|\"\(\[\]!#-[^-~ \t]|(\\[\t -~]))+\")@([!#-'*+/-9=?A-Z^-~-]+(\.[!#-'*+/-9=?A-Z^-~-]+)*|\[[\t -Z^-~]*])");
+
+  if (!regex.test(email)) {
+    errors.push('El Email no es valido');
+  }
 
   // Retornar datos si hay errores
   if (Object.keys(errors).length) {
@@ -47,6 +55,7 @@ export const NewClient = () => {
 
         <Form
           method="post"
+          noValidate
         >
           <FormClient />
 
