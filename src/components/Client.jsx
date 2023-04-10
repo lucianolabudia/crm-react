@@ -1,5 +1,9 @@
+import { useNavigate } from "react-router-dom";
+
 
 export const Client = ({ client }) => {
+
+    const navigate = useNavigate()
 
     const { id, name, phone, email, company } = client
 
@@ -19,6 +23,7 @@ export const Client = ({ client }) => {
                 <button
                     type="button"
                     className="text-blue-600 hover:text-blue-700 uppercase font-bold text-xs"
+                    onClick={ () => navigate(`/clientes/${id}/editar`) }
                 >
                     Editar
                 </button>
