@@ -4,8 +4,8 @@ import { getClients } from "../data/clients";
 
 
 export function loader() {
-  const clients = getClients();
 
+  const clients = getClients();
   return clients;
 }
 
@@ -13,8 +13,6 @@ export function loader() {
 export const Index = () => {
 
   const clients = useLoaderData();
-
-
 
   return (
     <>
