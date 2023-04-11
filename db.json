@@ -8,11 +8,12 @@
       "company": "Seleccion Argentina"
     },
     {
-      "id": 2,
-      "name": "Julian",
-      "phone": 138198313,
+      "name": "Julian Alvarez",
+      "company": "Seleccion Argentina",
       "email": "julianaraña@afa.com",
-      "company": "Seleccion Argentina"
+      "phone": "138198313",
+      "notes": "Cliente actualizado",
+      "id": 2
     },
     {
       "id": 3,
