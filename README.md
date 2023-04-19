@@ -19,3 +19,7 @@ La aplicación se desarrolló utilizando las siguientes tecnologías:
 
 
 [Link para utilizar la APP](https://gilded-cajeta-3f4599.netlify.app/)
+
+## Imagenes de muestra:
+
+![crm-react1](https://user-images.githubusercontent.com/59026280/233165448-7aef152a-53a9-4194-8c18-d9759a5b79b4.PNG)
